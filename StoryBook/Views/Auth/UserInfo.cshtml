@@ -1,0 +1,70 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Account Information";
+}
+<div class="container">
+<div class="account-container">
+    <div class="account-header">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="account-photo">
+        <h2 class="account-nickname">@@adminihor21</h2>
+    </div>
+    <div class="account-details">
+        <p><strong>Account Created:</strong> 01.01.2020</p>
+        <p><strong>Stories Written:</strong> 10</p>
+        <p><strong>Likes Received:</strong> 150</p>
+    </div>
+</div>
+</div>
+
+<style>
+    .account-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f5f7fa;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .account-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .account-photo {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .account-nickname {
+        font-family: 'Lato', sans-serif;
+        font-size: 24px;
+        color: #333;
+        margin: 0;
+    }
+
+    .account-details {
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .account-details p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .account-details strong {
+            color: #333;
+        }
+</style>

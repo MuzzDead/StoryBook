@@ -1,0 +1,34 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+    <div class="card-title">Register</div>
+
+    <form asp-asp-controller="Auth" asp-action="Register" class="login-card">
+        <div class="card-main">
+            <div class="input-area">
+                <label for="Title">NickName</label>
+                <input class="form-control" placeholder="Enter your Nickname" />
+            </div>
+            <div class="input-area">
+                <label for="Title">Email</label>
+                <input class="form-control" placeholder="Enter your Email" />
+            </div>
+
+            <br />
+            
+            <div class="input-area">
+                <label for="Title">Password</label>
+                <input class="form-control" placeholder="Enter your Password" />
+            </div>
+            <div class="input-area">
+                <label for="Title">Confirm Password</label>
+                <input class="form-control" placeholder="Confirm your Password" />
+            </div>
+            <a asp-controller="Story" asp-action="Index" class="btn btn-cancel">Cancel</a>
+            <a asp-action="Register" type="submit" class="btn btn-publish">Register</a>
+        </div>
+    </form>
+</div>

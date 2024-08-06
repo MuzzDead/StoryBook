@@ -1,0 +1,26 @@
+﻿@model Story
+
+@{
+    ViewData["Title"] = "Create Story";
+}
+
+<div class="container">
+    <div class="card-title">New Story</div>
+
+    <form asp-action="Create" method="post" class="create-card">
+        <div class="card-main">
+            <div class="input-area">
+                <label for="Title">Title</label>
+                <input asp-for="Title" class="form-control" placeholder="Enter the title" />
+            </div>
+            <div class="input-area">
+                <label for="Content">The text of the story</label>
+                <textarea class="form-control fixed-textarea" placeholder="Write your story here..."></textarea>
+            </div>
+            <div class="form-buttons">
+                <a asp-action="Index" class="btn btn-cancel">Cancel</a>
+                <a asp-action="Create" type="submit" class="btn btn-publish">Publish</a>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,335 @@
+body {
+    background-color: #f5f7fa;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+.create-card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.login-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+    .input-area label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.fixed-textarea {
+    height: 300px; /* Фіксована висота для textarea */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cancel {
+    background-color: #ccc;
+    color: white;
+}
+
+    .btn-cancel:hover {
+        background-color: #999;
+    }
+
+.btn-publish {
+    background-color: #007bff;
+    color: white;
+}
+
+    .btn-publish:hover {
+        background-color: #0056b3;
+    }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar .logo a {
+        font-family: 'Merriweather', serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffca28; /* Змінив колір на більш привабливий */
+        text-decoration: none;
+    }
+
+    .navbar a {
+        color: grey;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+        .navbar a:hover {
+            color: #0056b3;
+        }
+
+.createPlus {
+    font-size: 40px;
+    position: fixed;
+    bottom: 10%;
+    left: 8%;
+    background-color: #ffc107;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+    .createPlus:hover {
+        transform: scale(1.1);
+    }
+
+    .createPlus::after {
+        content: "Share your story";
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffc107;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1.3s, visibility 0.4s;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .createPlus:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.plusLink {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.search-sort-bar {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+
+    .search-bar input {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .search-bar i {
+        color: #007bff;
+    }
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .search-button:hover {
+        background-color: #0056b3;
+    }
+
+.sort-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.sort-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+    .sort-button i {
+        font-size: 18px;
+        color: #666;
+    }
+
+    .sort-button:hover {
+        color: #007bff;
+    }
+
+    .sort-button:focus {
+        outline: none;
+    }
+
+.cards {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+    .cards:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+.card-main {
+    margin: 10px;
+}
+
+.card-line {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 1px;
+    border: none;
+}
+
+.card-description {
+    background-color: #fffde7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card-text {
+    margin: 0;
+    color: #333;
+}
+
+.card-title {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #ffc107;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-datetime,
+.card-author a {
+    text-decoration: none;
+    color: #666;
+}
+
+.card-author a {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+    .card-author a:hover {
+        color: #0056b3;
+    }
+
+#morelink {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    #morelink:hover {
+        color: #0056b3;
+    }
+
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    bottom: 0;
+}
